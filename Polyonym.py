@@ -10,7 +10,7 @@ while hornercheck == False:
             condition = False
         else:
             print("The polyonym cannot be of the third-degree if 'a' is 0! Please input another number!\n")
-    #now that a != 0, input the other numbers (those can be 0 i think)
+    #now that a != 0, input the other numbers
     b = int(input("Give b: "))
     c = int(input("Give c: "))
     d = int(input("Give d: "))
