@@ -1,5 +1,5 @@
 print("\n")
-print("This program will factorize a third-degree polynomial equation of the form ax³+bx²+cx+d\n")
+print("This program will factorize a third-degree polynomial equation of the form ax³+bx²+cx+d and provide the three values of x that verify it.\n")
 
 hornercheck = False
 while hornercheck == False:
