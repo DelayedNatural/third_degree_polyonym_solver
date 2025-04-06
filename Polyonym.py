@@ -14,7 +14,6 @@ while hornercheck == False:
     b = int(input("Give b: "))
     c = int(input("Give c: "))
     d = int(input("Give d: "))
-    print("\n")
 
     #check from 1 through 1000 if there is a solution, if not, check from -1 to -1000
     r = 0 
@@ -47,36 +46,40 @@ while hornercheck == False:
             if hornerA > 1:
                 if hornerB < 0:
                     if hornerC < 0: 
-                        print(f"The factorized polyonym is: (x {-r})({hornerA}x\u00B2{hornerB}x{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})({hornerA}x\u00B2{hornerB}x{hornerC}), with r= {r}!")
                     else:
-                        print(f"The factorized polyonym is: (x {-r})({hornerA}x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})({hornerA}x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
                 elif hornerB > 0:
-                        print(f"The factorized polyonym is: (x {-r})({hornerA}x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})({hornerA}x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")
             elif hornerA < -1:
                 if hornerB < 0:
                     if hornerC < 0: 
-                        print(f"The factorized polyonym is: (x {-r})(-{hornerA}x\u00B2{hornerB}x{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})(-{hornerA}x\u00B2{hornerB}x{hornerC}), with r= {r}!")
                     else:
-                        print(f"The factorized polyonym is: (x {-r})(-{hornerA}x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})(-{hornerA}x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
                 elif hornerB > 0:
-                        print(f"The factorized polyonym is: (x {-r})(-{hornerA}x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})(-{hornerA}x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")
         else:
             if hornerA == 1:
                 if hornerB < 0:
                     if hornerC < 0: 
-                        print(f"The factorized polyonym is: (x {-r})(x\u00B2{hornerB}x{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})(x\u00B2{hornerB}x{hornerC}), with r= {r}!")
                     else:
-                        print(f"The factorized polyonym is: (x {-r})(x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})(x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
                 elif hornerB > 0:
-                        print(f"The factorized polyonym is: (x {-r})(x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (x{-r})(x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")
             elif hornerA == -1:
                 if hornerB < 0:
                     if hornerC < 0: 
-                        print(f"The factorized polyonym is: (-x {-r})(x\u00B2{hornerB}x{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (-x{-r})(x\u00B2{hornerB}x{hornerC}), with r= {r}!")
                     else:
-                        print(f"The factorized polyonym is: (-x {-r})(x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
+                        print(f"The factorized polyonym is: (-x{-r})(x\u00B2{hornerB}x+{hornerC}), with r= {r}!")
                 elif hornerB > 0:
-                        print(f"The factorized polyonym is: (-x {-r})(x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")                                       
-                            
+                        print(f"The factorized polyonym is: (-x{-r})(x\u00B2+{hornerB}x+{hornerC}), with r= {r}!")                                       
+        from math import sqrt
+        x1 = r
+        x2 = (-hornerB + sqrt (hornerB ** 2 - 4 * hornerA * hornerC)) / (2 * hornerA)
+        x3 = (-hornerB - sqrt (hornerB ** 2 - 4 * hornerA * hornerC)) / (2 * hornerA)
+        print(f"The x for the equation are {x1},{x2} and {x3}")                   
     else:
         print("This polyonym doesn't have an integer x that verifies the equation! Please give another polyonym.\n")
